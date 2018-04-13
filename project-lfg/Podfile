@@ -6,5 +6,6 @@ target 'project-lfg' do
   use_frameworks!
 
   # Pods for project-lfg
-
+  pod 'Firebase'
+  pod 'Eureka'
 end

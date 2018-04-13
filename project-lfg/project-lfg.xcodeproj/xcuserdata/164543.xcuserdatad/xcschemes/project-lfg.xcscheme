@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D69294BE2076A4DB00DEA75A"
+               BlueprintIdentifier = "D694AB8A20813117002044D4"
                BuildableName = "project-lfg.app"
                BlueprintName = "project-lfg"
                ReferencedContainer = "container:project-lfg.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D69294BE2076A4DB00DEA75A"
+            BlueprintIdentifier = "D694AB8A20813117002044D4"
             BuildableName = "project-lfg.app"
             BlueprintName = "project-lfg"
             ReferencedContainer = "container:project-lfg.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D69294BE2076A4DB00DEA75A"
+            BlueprintIdentifier = "D694AB8A20813117002044D4"
             BuildableName = "project-lfg.app"
             BlueprintName = "project-lfg"
             ReferencedContainer = "container:project-lfg.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D69294BE2076A4DB00DEA75A"
+            BlueprintIdentifier = "D694AB8A20813117002044D4"
             BuildableName = "project-lfg.app"
             BlueprintName = "project-lfg"
             ReferencedContainer = "container:project-lfg.xcodeproj">

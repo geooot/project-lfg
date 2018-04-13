@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  project-lfg
 //
-//  Created by Thayamkery, George B on 4/5/18.
-//  Copyright © 2018 Thayamkery, George. All rights reserved.
+//  Created by Thayamkery, George B on 4/13/18.
+//  Copyright © 2018 Team Accord. All rights reserved.
 //
 
 import UIKit

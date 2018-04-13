@@ -7,83 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17AF98F851A47DFE7F25C51B /* Pods_project_lfg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F77A0F878B594651AE2679 /* Pods_project_lfg.framework */; };
-		D69294C32076A4DB00DEA75A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69294C22076A4DB00DEA75A /* AppDelegate.swift */; };
-		D69294C52076A4DB00DEA75A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69294C42076A4DB00DEA75A /* ViewController.swift */; };
-		D69294C82076A4DB00DEA75A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69294C62076A4DB00DEA75A /* Main.storyboard */; };
-		D69294CA2076A4DB00DEA75A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69294C92076A4DB00DEA75A /* Assets.xcassets */; };
-		D69294CD2076A4DB00DEA75A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69294CB2076A4DB00DEA75A /* LaunchScreen.storyboard */; };
+		2581BFA53ABEDA2FD9CE2285 /* Pods_project_lfg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375A8F7B1D6377CFFBAAF4A9 /* Pods_project_lfg.framework */; };
+		D694AB8F20813117002044D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694AB8E20813117002044D4 /* AppDelegate.swift */; };
+		D694AB9120813117002044D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694AB9020813117002044D4 /* ViewController.swift */; };
+		D694AB9420813117002044D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D694AB9220813117002044D4 /* Main.storyboard */; };
+		D694AB9620813117002044D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D694AB9520813117002044D4 /* Assets.xcassets */; };
+		D694AB9920813117002044D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D694AB9720813117002044D4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		82F77A0F878B594651AE2679 /* Pods_project_lfg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_lfg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D270BE767E7330791BD14BE0 /* Pods-project-lfg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-lfg.release.xcconfig"; path = "Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg.release.xcconfig"; sourceTree = "<group>"; };
-		D69294BF2076A4DB00DEA75A /* project-lfg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-lfg.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D69294C22076A4DB00DEA75A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D69294C42076A4DB00DEA75A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D69294C72076A4DB00DEA75A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D69294C92076A4DB00DEA75A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D69294CC2076A4DB00DEA75A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D69294CE2076A4DB00DEA75A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFDE6C54D42664DB23616B63 /* Pods-project-lfg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-lfg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg.debug.xcconfig"; sourceTree = "<group>"; };
+		1A0B0317144D1DF0A68AACE3 /* Pods-project-lfg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-lfg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg.debug.xcconfig"; sourceTree = "<group>"; };
+		375A8F7B1D6377CFFBAAF4A9 /* Pods_project_lfg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_lfg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A72B283A81675F67C996577 /* Pods-project-lfg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-lfg.release.xcconfig"; path = "Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg.release.xcconfig"; sourceTree = "<group>"; };
+		D694AB8B20813117002044D4 /* project-lfg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-lfg.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D694AB8E20813117002044D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D694AB9020813117002044D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D694AB9320813117002044D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D694AB9520813117002044D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D694AB9820813117002044D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D694AB9A20813117002044D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D69294BC2076A4DB00DEA75A /* Frameworks */ = {
+		D694AB8820813117002044D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17AF98F851A47DFE7F25C51B /* Pods_project_lfg.framework in Frameworks */,
+				2581BFA53ABEDA2FD9CE2285 /* Pods_project_lfg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		532DF2B50AA6B1566606E7C5 /* Frameworks */ = {
+		660BB3AE13595545310DCC7A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				82F77A0F878B594651AE2679 /* Pods_project_lfg.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6B5A67D61FF27A3C99CDA7DE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EFDE6C54D42664DB23616B63 /* Pods-project-lfg.debug.xcconfig */,
-				D270BE767E7330791BD14BE0 /* Pods-project-lfg.release.xcconfig */,
+				1A0B0317144D1DF0A68AACE3 /* Pods-project-lfg.debug.xcconfig */,
+				5A72B283A81675F67C996577 /* Pods-project-lfg.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D69294B62076A4DB00DEA75A = {
+		7EB0BBB2AE6AE7CB988A747D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D69294C12076A4DB00DEA75A /* project-lfg */,
-				D69294C02076A4DB00DEA75A /* Products */,
-				6B5A67D61FF27A3C99CDA7DE /* Pods */,
-				532DF2B50AA6B1566606E7C5 /* Frameworks */,
+				375A8F7B1D6377CFFBAAF4A9 /* Pods_project_lfg.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D694AB8220813116002044D4 = {
+			isa = PBXGroup;
+			children = (
+				D694AB8D20813117002044D4 /* project-lfg */,
+				D694AB8C20813117002044D4 /* Products */,
+				660BB3AE13595545310DCC7A /* Pods */,
+				7EB0BBB2AE6AE7CB988A747D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		D69294C02076A4DB00DEA75A /* Products */ = {
+		D694AB8C20813117002044D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D69294BF2076A4DB00DEA75A /* project-lfg.app */,
+				D694AB8B20813117002044D4 /* project-lfg.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D69294C12076A4DB00DEA75A /* project-lfg */ = {
+		D694AB8D20813117002044D4 /* project-lfg */ = {
 			isa = PBXGroup;
 			children = (
-				D69294C22076A4DB00DEA75A /* AppDelegate.swift */,
-				D69294C42076A4DB00DEA75A /* ViewController.swift */,
-				D69294C62076A4DB00DEA75A /* Main.storyboard */,
-				D69294C92076A4DB00DEA75A /* Assets.xcassets */,
-				D69294CB2076A4DB00DEA75A /* LaunchScreen.storyboard */,
-				D69294CE2076A4DB00DEA75A /* Info.plist */,
+				D694AB8E20813117002044D4 /* AppDelegate.swift */,
+				D694AB9020813117002044D4 /* ViewController.swift */,
+				D694AB9220813117002044D4 /* Main.storyboard */,
+				D694AB9520813117002044D4 /* Assets.xcassets */,
+				D694AB9720813117002044D4 /* LaunchScreen.storyboard */,
+				D694AB9A20813117002044D4 /* Info.plist */,
 			);
 			path = "project-lfg";
 			sourceTree = "<group>";
@@ -91,14 +91,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D69294BE2076A4DB00DEA75A /* project-lfg */ = {
+		D694AB8A20813117002044D4 /* project-lfg */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D69294D12076A4DB00DEA75A /* Build configuration list for PBXNativeTarget "project-lfg" */;
+			buildConfigurationList = D694AB9D20813117002044D4 /* Build configuration list for PBXNativeTarget "project-lfg" */;
 			buildPhases = (
-				945FD38D05ACAFB944D28180 /* [CP] Check Pods Manifest.lock */,
-				D69294BB2076A4DB00DEA75A /* Sources */,
-				D69294BC2076A4DB00DEA75A /* Frameworks */,
-				D69294BD2076A4DB00DEA75A /* Resources */,
+				3A13B9161F3CC16C3BA51316 /* [CP] Check Pods Manifest.lock */,
+				D694AB8720813117002044D4 /* Sources */,
+				D694AB8820813117002044D4 /* Frameworks */,
+				D694AB8920813117002044D4 /* Resources */,
+				099C526E97F5E287A5B7F88F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -106,26 +107,26 @@
 			);
 			name = "project-lfg";
 			productName = "project-lfg";
-			productReference = D69294BF2076A4DB00DEA75A /* project-lfg.app */;
+			productReference = D694AB8B20813117002044D4 /* project-lfg.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D69294B72076A4DB00DEA75A /* Project object */ = {
+		D694AB8320813116002044D4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "Thayamkery, George";
+				ORGANIZATIONNAME = "Team Accord";
 				TargetAttributes = {
-					D69294BE2076A4DB00DEA75A = {
+					D694AB8A20813117002044D4 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = D69294BA2076A4DB00DEA75A /* Build configuration list for PBXProject "project-lfg" */;
+			buildConfigurationList = D694AB8620813116002044D4 /* Build configuration list for PBXProject "project-lfg" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -133,31 +134,53 @@
 				en,
 				Base,
 			);
-			mainGroup = D69294B62076A4DB00DEA75A;
-			productRefGroup = D69294C02076A4DB00DEA75A /* Products */;
+			mainGroup = D694AB8220813116002044D4;
+			productRefGroup = D694AB8C20813117002044D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D69294BE2076A4DB00DEA75A /* project-lfg */,
+				D694AB8A20813117002044D4 /* project-lfg */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D69294BD2076A4DB00DEA75A /* Resources */ = {
+		D694AB8920813117002044D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D69294CD2076A4DB00DEA75A /* LaunchScreen.storyboard in Resources */,
-				D69294CA2076A4DB00DEA75A /* Assets.xcassets in Resources */,
-				D69294C82076A4DB00DEA75A /* Main.storyboard in Resources */,
+				D694AB9920813117002044D4 /* LaunchScreen.storyboard in Resources */,
+				D694AB9620813117002044D4 /* Assets.xcassets in Resources */,
+				D694AB9420813117002044D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		945FD38D05ACAFB944D28180 /* [CP] Check Pods Manifest.lock */ = {
+		099C526E97F5E287A5B7F88F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A13B9161F3CC16C3BA51316 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -178,30 +201,30 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D69294BB2076A4DB00DEA75A /* Sources */ = {
+		D694AB8720813117002044D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D69294C52076A4DB00DEA75A /* ViewController.swift in Sources */,
-				D69294C32076A4DB00DEA75A /* AppDelegate.swift in Sources */,
+				D694AB9120813117002044D4 /* ViewController.swift in Sources */,
+				D694AB8F20813117002044D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D69294C62076A4DB00DEA75A /* Main.storyboard */ = {
+		D694AB9220813117002044D4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D69294C72076A4DB00DEA75A /* Base */,
+				D694AB9320813117002044D4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D69294CB2076A4DB00DEA75A /* LaunchScreen.storyboard */ = {
+		D694AB9720813117002044D4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D69294CC2076A4DB00DEA75A /* Base */,
+				D694AB9820813117002044D4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -209,7 +232,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D69294CF2076A4DB00DEA75A /* Debug */ = {
+		D694AB9B20813117002044D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -260,7 +283,7 @@
 			};
 			name = Debug;
 		};
-		D69294D02076A4DB00DEA75A /* Release */ = {
+		D694AB9C20813117002044D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -304,9 +327,9 @@
 			};
 			name = Release;
 		};
-		D69294D22076A4DB00DEA75A /* Debug */ = {
+		D694AB9E20813117002044D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFDE6C54D42664DB23616B63 /* Pods-project-lfg.debug.xcconfig */;
+			baseConfigurationReference = 1A0B0317144D1DF0A68AACE3 /* Pods-project-lfg.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "project-lfg/Info.plist";
@@ -317,9 +340,9 @@
 			};
 			name = Debug;
 		};
-		D69294D32076A4DB00DEA75A /* Release */ = {
+		D694AB9F20813117002044D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D270BE767E7330791BD14BE0 /* Pods-project-lfg.release.xcconfig */;
+			baseConfigurationReference = 5A72B283A81675F67C996577 /* Pods-project-lfg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "project-lfg/Info.plist";
@@ -333,24 +356,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D69294BA2076A4DB00DEA75A /* Build configuration list for PBXProject "project-lfg" */ = {
+		D694AB8620813116002044D4 /* Build configuration list for PBXProject "project-lfg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D69294CF2076A4DB00DEA75A /* Debug */,
-				D69294D02076A4DB00DEA75A /* Release */,
+				D694AB9B20813117002044D4 /* Debug */,
+				D694AB9C20813117002044D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D69294D12076A4DB00DEA75A /* Build configuration list for PBXNativeTarget "project-lfg" */ = {
+		D694AB9D20813117002044D4 /* Build configuration list for PBXNativeTarget "project-lfg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D69294D22076A4DB00DEA75A /* Debug */,
-				D69294D32076A4DB00DEA75A /* Release */,
+				D694AB9E20813117002044D4 /* Debug */,
+				D694AB9F20813117002044D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D69294B72076A4DB00DEA75A /* Project object */;
+	rootObject = D694AB8320813116002044D4 /* Project object */;
 }
