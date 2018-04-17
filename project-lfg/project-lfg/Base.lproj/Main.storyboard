@@ -34,6 +34,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="o0f-KO-zJc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="0Qh-MA-NYH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -50,7 +51,7 @@
         <!--Add Post-->
         <scene sceneID="vz7-cK-WjB">
             <objects>
-                <viewController title="Add Post" id="6zn-7h-IJR" sceneMemberID="viewController">
+                <viewController title="Add Post" id="6zn-7h-IJR" customClass="AddViewController" customModule="project_lfg" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hay-fH-gZL"/>
                         <viewControllerLayoutGuide type="bottom" id="aAi-27-fwE"/>

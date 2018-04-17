@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		069749B720867217007F2184 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069749B620867217007F2184 /* AddViewController.swift */; };
 		2581BFA53ABEDA2FD9CE2285 /* Pods_project_lfg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375A8F7B1D6377CFFBAAF4A9 /* Pods_project_lfg.framework */; };
 		D694AB8F20813117002044D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694AB8E20813117002044D4 /* AppDelegate.swift */; };
 		D694AB9120813117002044D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694AB9020813117002044D4 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		069749B620867217007F2184 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		1A0B0317144D1DF0A68AACE3 /* Pods-project-lfg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-lfg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg.debug.xcconfig"; sourceTree = "<group>"; };
 		375A8F7B1D6377CFFBAAF4A9 /* Pods_project_lfg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_lfg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A72B283A81675F67C996577 /* Pods-project-lfg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-lfg.release.xcconfig"; path = "Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				D694AB8E20813117002044D4 /* AppDelegate.swift */,
 				D694AB9020813117002044D4 /* ViewController.swift */,
 				D694AB9220813117002044D4 /* Main.storyboard */,
+				069749B620867217007F2184 /* AddViewController.swift */,
 				D694AB9520813117002044D4 /* Assets.xcassets */,
 				D694AB9720813117002044D4 /* LaunchScreen.storyboard */,
 				D694AB9A20813117002044D4 /* Info.plist */,
@@ -207,6 +210,7 @@
 			files = (
 				D694AB9120813117002044D4 /* ViewController.swift in Sources */,
 				D694AB8F20813117002044D4 /* AppDelegate.swift in Sources */,
+				069749B720867217007F2184 /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +376,7 @@
 				D694AB9F20813117002044D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

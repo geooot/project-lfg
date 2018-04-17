@@ -1,5 +1,5 @@
 PODS:
-  - Eureka (4.1.1)
+  - Eureka (2.0.1)
   - Firebase (4.12.0):
     - Firebase/Core (= 4.12.0)
   - Firebase/Core (4.12.0):
@@ -24,7 +24,7 @@ PODS:
   - nanopb/encode (0.3.8)
 
 DEPENDENCIES:
-  - Eureka
+  - Eureka (~> 2.0.0-beta.1)
   - Firebase
 
 SPEC REPOS:
@@ -38,7 +38,7 @@ SPEC REPOS:
     - nanopb
 
 SPEC CHECKSUMS:
-  Eureka: b88fb930e42c79f8c03c373d0fcdc28c1d6c50ed
+  Eureka: ae837bb1dfae0c07bc1bda7aeef87876eeb537c2
   Firebase: d7fdf40e4d6c841849c52919f437fd3a0009ded0
   FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
   FirebaseCore: ff49ebb37e0f63a570d78c4f1c1c0befe8659d5c
@@ -46,6 +46,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 8c0623363935d6bc3c694f9afb896b91c6e55f24
+PODFILE CHECKSUM: 0c880792f4a2c8126d0e419f00b3f975603ff242
 
 COCOAPODS: 1.5.0

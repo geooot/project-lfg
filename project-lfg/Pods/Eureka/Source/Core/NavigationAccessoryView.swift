@@ -22,16 +22,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+
 import Foundation
 
 /// Class for the navigation accessory view used in FormViewController
-open class NavigationAccessoryView: UIToolbar {
+open class NavigationAccessoryView : UIToolbar {
     open var previousButton: UIBarButtonItem!
     open var nextButton: UIBarButtonItem!
     open var doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
     private var fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
     private var flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-
+    
     public override init(frame: CGRect) {
         super.init(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: 44.0))
         autoresizingMask = .flexibleWidth
@@ -39,7 +40,7 @@ open class NavigationAccessoryView: UIToolbar {
         initializeChevrons()
         setItems([previousButton, fixedSpace, nextButton, flexibleSpace, doneButton], animated: false)
     }
-
+    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -63,6 +64,6 @@ open class NavigationAccessoryView: UIToolbar {
         previousButton = UIBarButtonItem(image: imageLeftChevron, style: .plain, target: nil, action: nil)
         nextButton = UIBarButtonItem(image: imageRightChevron, style: .plain, target: nil, action: nil)
     }
-
+    
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {}
 }
