@@ -7,5 +7,6 @@ target 'project-lfg' do
 
   # Pods for project-lfg
   pod 'Firebase'
-  pod 'Eureka'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 end
