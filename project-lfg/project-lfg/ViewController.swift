@@ -15,9 +15,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         Auth.auth().addStateDidChangeListener { (auth, user) in
-            print("user: \(String(describing: user)) auth: \(String(describing: user))")
+            print("onMainView user: \(String(describing: user)) auth: \(String(describing: user))")
             if user == nil{
-                self.performSegue(withIdentifier: "goToAuthView", sender: nil)
+                self.navigationController?.popToRootViewController(animated: true)
             }
         }
     }

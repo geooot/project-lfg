@@ -16,7 +16,7 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -34,7 +34,7 @@ class AuthViewController: UIViewController {
         }
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if user != nil {
-                self.navigationController?.popViewController(animated: true)
+                self.performSegue(withIdentifier: "goToMainScreen", sender: nil)
             }else{
                 print(error ?? "An error occured")
             }

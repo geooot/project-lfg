@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G1314" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o0f-KO-zJc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G1314" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L0k-or-BuC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,13 +33,42 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="pdY-l4-LXV"/>
-                    <connections>
-                        <segue destination="zDx-xq-gsc" kind="presentation" identifier="goToAuthView" id="L3K-PD-bh8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1919.2" y="123.68815592203899"/>
+        </scene>
+        <!--Loader-->
+        <scene sceneID="2JG-av-pyC">
+            <objects>
+                <viewController title="Loader" id="L0k-or-BuC" customClass="LoadingViewController" customModule="project_lfg" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RGH-nR-se1"/>
+                        <viewControllerLayoutGuide type="bottom" id="CvF-7a-xR2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VoZ-uq-Alc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="b1G-R0-Jnw">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b1G-R0-Jnw" firstAttribute="centerY" secondItem="VoZ-uq-Alc" secondAttribute="centerY" id="a1q-Fy-rqx"/>
+                            <constraint firstItem="b1G-R0-Jnw" firstAttribute="centerX" secondItem="VoZ-uq-Alc" secondAttribute="centerX" id="qKC-oa-hDk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IU3-Fb-Uec"/>
+                    <connections>
+                        <segue destination="o0f-KO-zJc" kind="show" identifier="goToMainView" id="xWu-jI-Ugu"/>
+                        <segue destination="zDx-xq-gsc" kind="show" identifier="goToAuthView" id="7ur-2g-S71"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVB-Mf-gsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-918" y="51"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IDt-YT-yP7">
@@ -128,11 +157,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="ipE-ub-hM5" id="r5s-GO-EGT"/>
                         <outlet property="passwordTextField" destination="MOC-dD-45N" id="1aM-5I-V8o"/>
+                        <segue destination="o0f-KO-zJc" kind="show" identifier="goToMainScreen" id="ZoV-D0-Vvx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUC-pd-IxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2684" y="124"/>
+            <point key="canvasLocation" x="31" y="-578"/>
         </scene>
         <!--Profile-->
         <scene sceneID="STN-fS-54X">
@@ -173,4 +203,7 @@
             <point key="canvasLocation" x="980" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZoV-D0-Vvx"/>
+    </inferredMetricsTieBreakers>
 </document>
