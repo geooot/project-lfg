@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0672ABEE2089235500BD11D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0672ABED2089235500BD11D1 /* GoogleService-Info.plist */; };
 		069749B720867217007F2184 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069749B620867217007F2184 /* AddViewController.swift */; };
 		2581BFA53ABEDA2FD9CE2285 /* Pods_project_lfg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375A8F7B1D6377CFFBAAF4A9 /* Pods_project_lfg.framework */; };
 		D694AB8F20813117002044D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694AB8E20813117002044D4 /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0672ABED2089235500BD11D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		069749B620867217007F2184 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		1A0B0317144D1DF0A68AACE3 /* Pods-project-lfg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-lfg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg.debug.xcconfig"; sourceTree = "<group>"; };
 		375A8F7B1D6377CFFBAAF4A9 /* Pods_project_lfg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_lfg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 		D694AB8D20813117002044D4 /* project-lfg */ = {
 			isa = PBXGroup;
 			children = (
+				0672ABED2089235500BD11D1 /* GoogleService-Info.plist */,
 				D694AB8E20813117002044D4 /* AppDelegate.swift */,
 				D694AB9020813117002044D4 /* ViewController.swift */,
 				D694AB9220813117002044D4 /* Main.storyboard */,
@@ -103,6 +106,7 @@
 				D694AB8820813117002044D4 /* Frameworks */,
 				D694AB8920813117002044D4 /* Resources */,
 				099C526E97F5E287A5B7F88F /* [CP] Embed Pods Frameworks */,
+				9312B41A2B9B3007A9768537 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D694AB9920813117002044D4 /* LaunchScreen.storyboard in Resources */,
+				0672ABEE2089235500BD11D1 /* GoogleService-Info.plist in Resources */,
 				D694AB9620813117002044D4 /* Assets.xcassets in Resources */,
 				D694AB9420813117002044D4 /* Main.storyboard in Resources */,
 			);
@@ -169,12 +174,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -199,6 +208,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9312B41A2B9B3007A9768537 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
