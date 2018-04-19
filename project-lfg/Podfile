@@ -9,4 +9,5 @@ target 'project-lfg' do
   pod 'Firebase'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
+  pod 'Eureka', "~> 2.0.0-beta.1"
 end
