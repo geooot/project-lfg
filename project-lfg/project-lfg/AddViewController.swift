@@ -13,11 +13,27 @@ let getRanks = ["None": [], "League of Legends": ["Unranked", "Bronze", "Silver"
 
 class AddViewController: FormViewController {
     
+    var Console:String = ""
     var GameName:String = ""
     var GameRank:String = ""
+    var GameTime:String = ""
+    var PostDesc:String = ""
+    var PlayerWant:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        form +++ Section("Console")
+            <<< ActionSheetRow<String>()
+                { console in
+                console.tag = "ConsoleChoice"
+                console.title = "Console"
+                console.selectorTitle = "Choose your Console"
+                console.options = ["PC", "Xbox One", "Playstation 4"]
+                console.value = "PC"
+                }.onChange{ console in
+                    self.Console = console.value!
+                    print(self.Console)
+                }
         form +++ Section("Game Choice")
             <<< ActionSheetRow<String>()
                 {
@@ -37,24 +53,48 @@ class AddViewController: FormViewController {
                 $0.title = "Hours Played"
                 $0.placeholder = "Hours Played"
                 
+                }.onChange{ row in
+                    self.GameTime = row.value!
+                    print(self.GameTime)
         }
-        form +++ Section("Rankings")
         
+        form +++ Section("Rankings")
+        form +++ Section("Description")
+            <<< TextAreaRow()
+                { desc in
+                  desc.tag = "PostDesc"
+                  desc.title = "Post Description"
+                  desc.placeholder = "Post a Desctription"
+                }.onChange{ row in
+                    self.PostDesc = row.value!
+                    print(self.PostDesc)
+                }
+        form +++ Section("Players Wanted")
+            <<< ActionSheetRow<String>() { want in
+                want.tag = "PlayerWant"
+                want.title = "Players Wanted"
+                want.selectorTitle = "Pick Player Count"
+                want.options = ["1", "2", "3", "4", "5"]
+                want.value = "1"
+                }.onChange{ want in
+                    self.PlayerWant = want.value!
+                    print(self.PlayerWant)
+                }
     }
     
     func addRankings()
     {
-        form.allSections[2].removeAll()
-        form.allSections[2]
-            <<< ActionSheetRow<String>() { row in
-                row.tag = "GameRank"
-                row.title = "Rankings"
-                row.selectorTitle = "Pick your rank"
-                row.options = getRanks[self.GameName]!
-                row.value = "None"
-                GameRank = row.value!
-                }.onChange{ row in
-                    self.GameRank = row.value!;
+        form.allSections[3].removeAll()
+        form.allSections[3]
+            <<< ActionSheetRow<String>() { rank in
+                rank.tag = "GameRank"
+                rank.title = "Rankings"
+                rank.selectorTitle = "Pick your rank"
+                rank.options = getRanks[self.GameName]!
+                rank.value = "None"
+                GameRank = rank.value!
+                }.onChange{ rank in
+                    self.GameRank = rank.value!;
                     print(self.GameRank)
         }
        
