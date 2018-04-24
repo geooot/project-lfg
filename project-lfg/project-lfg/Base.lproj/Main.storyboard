@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Req-wP-uil" id="Wdc-9B-DQX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXo-Db-JJc">
@@ -104,7 +104,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="aeM-dc-dEj" kind="relationship" relationship="viewControllers" id="TFc-jz-cWb"/>
-                        <segue destination="6zn-7h-IJR" kind="relationship" relationship="viewControllers" id="Fdm-7l-wmq"/>
+                        <segue destination="GeW-Yf-csy" kind="relationship" relationship="viewControllers" id="Fdm-7l-wmq"/>
                         <segue destination="qAJ-xg-SIJ" kind="relationship" relationship="viewControllers" id="31K-Dh-ceI"/>
                     </connections>
                 </tabBarController>
@@ -115,7 +115,7 @@
         <!--Add Post-->
         <scene sceneID="vz7-cK-WjB">
             <objects>
-                <viewController title="Add Post" id="6zn-7h-IJR" sceneMemberID="viewController">
+                <viewController title="Add Post" id="6zn-7h-IJR" customClass="AddViewController" customModule="project_lfg" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hay-fH-gZL"/>
                         <viewControllerLayoutGuide type="bottom" id="aAi-27-fwE"/>
@@ -125,11 +125,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Post" id="M4q-ff-A0E"/>
+                    <navigationItem key="navigationItem" title="Add Post" id="WHy-7G-sIY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOy-Zx-4ff" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="801"/>
+            <point key="canvasLocation" x="1919.2" y="800.14992503748135"/>
         </scene>
         <!--Auth-->
         <scene sceneID="I0F-jw-SeW">
@@ -218,7 +218,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aeM-dc-dEj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="2Au-gn-IRF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6H2-uL-7aL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6H2-uL-7aL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -231,32 +231,24 @@
             </objects>
             <point key="canvasLocation" x="980" y="123.68815592203899"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="Xcx-JM-hFf">
+        <!--Add Post-->
+        <scene sceneID="h8Y-GI-Le9">
             <objects>
-                <tableViewController id="Mko-3w-F2A" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1rP-g8-9RP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="igt-Zt-Zaf">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="igt-Zt-Zaf" id="83h-dZ-Puu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Mko-3w-F2A" id="jSb-DH-B7f"/>
-                            <outlet property="delegate" destination="Mko-3w-F2A" id="laj-8q-OWg"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cge-Sb-54h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GeW-Yf-csy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Post" id="M4q-ff-A0E"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uFQ-8l-Vjp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6zn-7h-IJR" kind="relationship" relationship="rootViewController" id="xh6-7X-Ocu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hbd-9u-mLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="980" y="800.14992503748135"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
