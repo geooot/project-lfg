@@ -9,7 +9,16 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController {
+struct CellData {
+    let username: String
+    let numOfPlayers: Int
+    let spotsTaken: Int
+    let datePosted: String
+    let description: String
+    let firebaseId: String
+}
+
+class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +43,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
 
-
+    
 }
 
