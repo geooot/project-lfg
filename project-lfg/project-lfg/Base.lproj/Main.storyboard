@@ -19,33 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="Req-wP-uil">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="112" id="Req-wP-uil" customClass="PostTableViewCell" customModule="project_lfg" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Req-wP-uil" id="Wdc-9B-DQX">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXo-Db-JJc">
-                                            <rect key="frame" x="8" y="0.0" width="359" height="112"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Someone wants some" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tD-ba-Hji">
-                                                    <rect key="frame" x="8" y="8" width="169" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="leadingMargin" secondItem="NXo-Db-JJc" secondAttribute="leading" id="4gG-GP-YHn"/>
-                                        <constraint firstItem="NXo-Db-JJc" firstAttribute="centerY" secondItem="Wdc-9B-DQX" secondAttribute="centerY" id="4uU-5r-D6O"/>
-                                        <constraint firstItem="NXo-Db-JJc" firstAttribute="top" secondItem="Wdc-9B-DQX" secondAttribute="top" id="Rsb-J0-yMb"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="NXo-Db-JJc" secondAttribute="trailing" id="Yop-Ko-kDG"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -237,7 +216,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GeW-Yf-csy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Add Post" id="M4q-ff-A0E"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uFQ-8l-Vjp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uFQ-8l-Vjp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

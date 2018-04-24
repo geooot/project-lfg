@@ -19,7 +19,7 @@ struct CellData {
 }
 
 class ViewController: UITableViewController {
-    
+    var data = [CellData]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,6 +29,11 @@ class ViewController: UITableViewController {
                 self.navigationController?.popToRootViewController(animated: true)
             }
         }
+        
+        data = [CellData.init(username: "geooot", numOfPlayers: 5, spotsTaken: 0, datePosted: "10/10/18", description: "Pls play with me", firebaseId: "fdsafdsafdsafsdf")]
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     @IBAction func signOut(_ sender: UIButton) {
@@ -44,6 +49,17 @@ class ViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: PostTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "postCell") as! PostTableViewCell
+        cell.myCellLabel.text = self.data[indexPath.row].username
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
 
     
 }
