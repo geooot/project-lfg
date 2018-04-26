@@ -52,7 +52,8 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PostTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "postCell") as! PostTableViewCell
-        cell.myCellLabel.text = self.data[indexPath.row].username
+        cell.myCellLabel.text = "\(self.data[indexPath.row].username) wants \(self.data[indexPath.row].numOfPlayers) players"
+        cell.filledInSpots.text = "\(self.data[indexPath.row].spotsTaken)/\(self.data[indexPath.row].numOfPlayers) Spots Taken"
         
         return cell
     }
