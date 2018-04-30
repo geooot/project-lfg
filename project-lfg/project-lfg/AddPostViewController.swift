@@ -1,7 +1,6 @@
 import Foundation
-
 import Eureka
-
+import Firebase
 
 
 let getRanks = ["None": [], "League of Legends": ["Unranked", "Bronze", "Silver", "Gold", "Platinum", "Diamond", "Master", "Challenger"], "Rainbow Six Siege": ["Unranked", "Copper", "Bronze", "Silver", "Gold", "Platinum", "Diamond"], "Overwatch": ["Unranked", "Bronze", "Silver", "Gold", "Platinum", "Diamond", "Master", "Grandmaster", "Top 500"]]
@@ -27,13 +26,11 @@ class AddViewController: FormViewController {
     
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         form +++ Section("Console")
             
             <<< ActionSheetRow<String>()
-                
                 { console in
                     
                     console.tag = "ConsoleChoice"
@@ -57,7 +54,6 @@ class AddViewController: FormViewController {
         form +++ Section("Game Choice")
             
             <<< ActionSheetRow<String>()
-                
                 {
                     
                     $0.tag = "GamePicker"
@@ -107,7 +103,6 @@ class AddViewController: FormViewController {
         form +++ Section("Description")
             
             <<< TextAreaRow()
-                
                 { desc in
                     
                     desc.tag = "PostDesc"
@@ -143,9 +138,15 @@ class AddViewController: FormViewController {
                     self.PlayerWant = want.value!
                     
                     print(self.PlayerWant)
-                    
         }
-        
+            <<< ButtonRow()
+                { addPost in
+                    addPost.title = "Create Post"
+                }
+                .onCellSelection()
+                {_,_ in
+                        self.uploadData()
+                }
     }
     
     
@@ -181,7 +182,25 @@ class AddViewController: FormViewController {
         }
         
         
-        
+    }
+    func uploadData()
+    {
+        let db = Firestore.firestore()
+        var ref: DocumentReference? = nil
+        ref = db.collection("posts").addDocument(data: [
+            "console": Console,
+            "gamename": GameName,
+            "gamerank": GameRank,
+            "gametime": GameTime,
+            "description": PostDesc,
+            "playercount": PlayerWant
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
     }
     
 }
