@@ -13,7 +13,7 @@ struct CellData {
     let username: String
     let numOfPlayers: Int
     let spotsTaken: Int
-    let datePosted: String
+    let datePosted: Date
     let description: String
     let firebaseId: String
 }
@@ -28,10 +28,24 @@ class ViewController: UITableViewController {
             if user == nil{
                 self.navigationController?.popToRootViewController(animated: true)
             }
+            
+            Firestore.firestore().collection("posts").getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                        let item = document.data()
+                        let timestamp: Timestamp = document.get("dateCreated") as! Timestamp
+                        let date = timestamp.dateValue()
+                        self.data.append(CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: date, description: item["PostDesc"] as! String, firebaseId: document.documentID))
+                    }
+                    self.tableView.reloadData()
+                }
+            }
         }
-        
-        data = [CellData.init(username: "geooot", numOfPlayers: 5, spotsTaken: 0, datePosted: "10/10/18", description: "Pls play with me", firebaseId: "fdsafdsafdsafsdf")]
-        
+
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -54,13 +68,18 @@ class ViewController: UITableViewController {
         let cell: PostTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "postCell") as! PostTableViewCell
         cell.myCellLabel.text = "\(self.data[indexPath.row].username) wants \(self.data[indexPath.row].numOfPlayers) players"
         cell.filledInSpots.text = "\(self.data[indexPath.row].spotsTaken)/\(self.data[indexPath.row].numOfPlayers) Spots Taken"
-        
+        cell.datePosted.text = self.data[indexPath.row].datePosted.description
+        cell.selectionStyle = .none
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
 
     
 }
