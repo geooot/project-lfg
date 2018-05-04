@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G1314" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L0k-or-BuC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="17E199" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L0k-or-BuC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,39 +13,19 @@
         <!--Home-->
         <scene sceneID="N6G-dI-VxN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bcy-Jt-msQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Home" id="Fyj-vK-UcS" customClass="ViewController" customModule="project_lfg" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" sectionHeaderHeight="28" sectionFooterHeight="28" id="8V5-k9-vts">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="Req-wP-uil">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fY5-sb-JhV">
                                 <rect key="frame" x="0.0" y="28" width="375" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Req-wP-uil" id="Wdc-9B-DQX">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fY5-sb-JhV" id="Qge-IL-oXX">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXo-Db-JJc">
-                                            <rect key="frame" x="8" y="0.0" width="359" height="112"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Someone wants some" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tD-ba-Hji">
-                                                    <rect key="frame" x="8" y="8" width="169" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="leadingMargin" secondItem="NXo-Db-JJc" secondAttribute="leading" id="4gG-GP-YHn"/>
-                                        <constraint firstItem="NXo-Db-JJc" firstAttribute="centerY" secondItem="Wdc-9B-DQX" secondAttribute="centerY" id="4uU-5r-D6O"/>
-                                        <constraint firstItem="NXo-Db-JJc" firstAttribute="top" secondItem="Wdc-9B-DQX" secondAttribute="top" id="Rsb-J0-yMb"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="NXo-Db-JJc" secondAttribute="trailing" id="Yop-Ko-kDG"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -56,7 +36,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="epS-Aw-v6o"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bcy-Jt-msQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1944.8" y="123.68815592203899"/>
         </scene>
@@ -218,7 +197,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aeM-dc-dEj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="2Au-gn-IRF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6H2-uL-7aL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6H2-uL-7aL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -252,6 +231,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZoV-D0-Vvx"/>
+        <segue reference="xWu-jI-Ugu"/>
     </inferredMetricsTieBreakers>
 </document>
