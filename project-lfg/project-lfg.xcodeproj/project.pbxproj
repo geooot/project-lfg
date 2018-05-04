@@ -13,8 +13,9 @@
 		D694AB9420813117002044D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D694AB9220813117002044D4 /* Main.storyboard */; };
 		D694AB9620813117002044D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D694AB9520813117002044D4 /* Assets.xcassets */; };
 		D694AB9920813117002044D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D694AB9720813117002044D4 /* LaunchScreen.storyboard */; };
+		D6B63F7F209CE2880014E3BC /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B63F7E209CE2880014E3BC /* AddPostViewController.swift */; };
 		D6CD3C422089199800D3CFD7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD3C412089199800D3CFD7 /* LoadingViewController.swift */; };
-		D6F21210208FB66C003F8A56 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F2120F208FB66C003F8A56 /* AddPostViewController.swift */; };
+		D6F21212208FBB6C003F8A56 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F21211208FBB6C003F8A56 /* PostTableViewCell.swift */; };
 		D6F384832086768100ADB845 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6F384822086768100ADB845 /* GoogleService-Info.plist */; };
 		D6F384852086790800ADB845 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F384842086790800ADB845 /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,8 +31,9 @@
 		D694AB9520813117002044D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D694AB9820813117002044D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D694AB9A20813117002044D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6B63F7E209CE2880014E3BC /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		D6CD3C412089199800D3CFD7 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		D6F2120F208FB66C003F8A56 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		D6F21211208FBB6C003F8A56 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		D6F384822086768100ADB845 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6F384842086790800ADB845 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 		D694AB8D20813117002044D4 /* project-lfg */ = {
 			isa = PBXGroup;
 			children = (
+				D6B63F7E209CE2880014E3BC /* AddPostViewController.swift */,
 				D6F384822086768100ADB845 /* GoogleService-Info.plist */,
 				D694AB8E20813117002044D4 /* AppDelegate.swift */,
 				D694AB9020813117002044D4 /* ViewController.swift */,
@@ -95,7 +98,7 @@
 				D694AB9A20813117002044D4 /* Info.plist */,
 				D6F384842086790800ADB845 /* AuthViewController.swift */,
 				D6CD3C412089199800D3CFD7 /* LoadingViewController.swift */,
-				D6F2120F208FB66C003F8A56 /* AddPostViewController.swift */,
+				D6F21211208FBB6C003F8A56 /* PostTableViewCell.swift */,
 			);
 			path = "project-lfg";
 			sourceTree = "<group>";
@@ -256,10 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D694AB9120813117002044D4 /* ViewController.swift in Sources */,
-				D6F21210208FB66C003F8A56 /* AddPostViewController.swift in Sources */,
 				D6F384852086790800ADB845 /* AuthViewController.swift in Sources */,
 				D694AB8F20813117002044D4 /* AppDelegate.swift in Sources */,
 				D6CD3C422089199800D3CFD7 /* LoadingViewController.swift in Sources */,
+				D6B63F7F209CE2880014E3BC /* AddPostViewController.swift in Sources */,
+				D6F21212208FBB6C003F8A56 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
