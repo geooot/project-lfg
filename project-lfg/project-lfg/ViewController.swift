@@ -16,6 +16,8 @@ struct CellData {
     let datePosted: Date
     let description: String
     let firebaseId: String
+    let game: String
+    let platform: String
 }
 
 class ViewController: UITableViewController {
@@ -29,20 +31,7 @@ class ViewController: UITableViewController {
                 self.navigationController?.popToRootViewController(animated: true)
             }
             
-            Firestore.firestore().collection("posts").getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        print("\(document.documentID) => \(document.data())")
-                        let item = document.data()
-                        let timestamp: Timestamp = document.get("dateCreated") as! Timestamp
-                        let date = timestamp.dateValue()
-                        self.data.append(CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: date, description: item["PostDesc"] as! String, firebaseId: document.documentID))
-                    }
-                    self.tableView.reloadData()
-                }
-            }
+            self.loadData()
         }
 
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
@@ -50,6 +39,9 @@ class ViewController: UITableViewController {
         tableView.dataSource = self
     }
 
+    @IBAction func reload(_ sender: UIBarButtonItem) {
+        self.loadData()
+    }
     @IBAction func signOut(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
@@ -75,6 +67,30 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
+    }
+    
+    
+    func loadData(){
+        data = []
+        Firestore.firestore().collection("posts").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    let item = document.data()
+                    if(item.count > 0){
+                        print(item)
+                        let timestamp: Timestamp = document.get("dateCreated") as! Timestamp
+                        let date = timestamp.dateValue()
+                        self.data.append(CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: date, description: item["PostDesc"] as! String, firebaseId: document.documentID))
+                    }else{
+                        print("No entries got!")
+                    }
+                }
+                self.tableView.reloadData()
+            }
+        }
     }
     
 //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
