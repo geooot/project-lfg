@@ -180,6 +180,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Post" id="WHy-7G-sIY"/>
+                    <connections>
+                        <segue destination="o0f-KO-zJc" kind="presentation" identifier="Reset Home" id="wDD-H0-nsy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOy-Zx-4ff" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -306,6 +309,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZoV-D0-Vvx"/>
+        <segue reference="wDD-H0-nsy"/>
     </inferredMetricsTieBreakers>
 </document>
