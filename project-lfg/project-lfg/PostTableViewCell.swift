@@ -15,6 +15,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var filledInSpots: UILabel!
     @IBOutlet weak var datePosted: UILabel!
     @IBOutlet weak var containerView: UIView!
+    var borderColor: UIColor!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,8 +24,6 @@ class PostTableViewCell: UITableViewCell {
         containerView.backgroundColor = UIColor.white
         containerView.layer.cornerRadius = 8
         containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = UIColor.red.cgColor
-        containerView.layer.shadowColor = UIColor.red.cgColor
         containerView.layer.shadowOffset = CGSize(width: 0, height: 14)
         containerView.layer.shadowOpacity = 0.14
         containerView.layer.shadowRadius = 14

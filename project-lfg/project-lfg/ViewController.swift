@@ -22,6 +22,7 @@ struct CellData {
 
 class ViewController: UITableViewController {
     var data = [CellData]()
+    var selectedIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -61,6 +62,7 @@ class ViewController: UITableViewController {
         cell.myCellLabel.text = "\(self.data[indexPath.row].username) wants \(self.data[indexPath.row].numOfPlayers) players"
         cell.filledInSpots.text = "\(self.data[indexPath.row].spotsTaken)/\(self.data[indexPath.row].numOfPlayers) Spots Taken"
         cell.datePosted.text = self.data[indexPath.row].datePosted.description
+        cell.containerView.layer.borderColor = platformColors[self.data[indexPath.row].platform]?.cgColor
         cell.selectionStyle = .none
         return cell
     }
@@ -93,10 +95,14 @@ class ViewController: UITableViewController {
         }
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        performSegue(withIdentifier: "ToDetailView", sender: data)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! DetailViewController
+        destinationVC.data = data[selectedIndex]
+    }
 }
 
