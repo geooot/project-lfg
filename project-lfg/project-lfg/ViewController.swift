@@ -17,6 +17,7 @@ struct CellData {
     let description: String
     let firebaseId: String
     let game: String
+    let gameRank: String
     let platform: String
 }
 
@@ -85,7 +86,7 @@ class ViewController: UITableViewController {
                         print(item)
                         let timestamp: Timestamp = document.get("dateCreated") as! Timestamp
                         let date = timestamp.dateValue()
-                        self.data.append(CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: date, description: item["PostDesc"] as! String, firebaseId: document.documentID, game: item["GameName"] as! String, platform: item["Platform"] as! String))
+                        self.data.append(CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: date, description: item["PostDesc"] as! String, firebaseId: document.documentID, game: item["GameName"] as! String, gameRank: item["GameRank"] as! String, platform: item["Platform"] as! String))
                     }else{
                         print("No entries got!")
                     }

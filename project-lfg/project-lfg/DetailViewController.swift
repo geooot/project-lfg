@@ -8,6 +8,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var platformLine: UIView!
     @IBOutlet weak var platformText: UILabel!
     
+    @IBOutlet weak var gameRankText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         Desc.text? = "\(data!.description)"
@@ -15,6 +16,7 @@ class DetailViewController: UIViewController {
         spotsFilled.text? = "\(data!.spotsTaken)/\(data!.numOfPlayers) Spots Taken"
         platformLine.backgroundColor = platformColors[data!.platform]!
         platformText.text? = "Platform: \(data!.platform)"
+        gameRankText.text? = data!.gameRank
     }
     
     override func didReceiveMemoryWarning() {
