@@ -102,13 +102,7 @@
                             <outlet property="delegate" destination="Fyj-vK-UcS" id="vgK-lo-1Sy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="epS-Aw-v6o">
-                        <barButtonItem key="rightBarButtonItem" title="Reload" id="5Y7-C9-eeh">
-                            <connections>
-                                <action selector="reload:" destination="Fyj-vK-UcS" id="e3S-Rb-9r5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Home" id="epS-Aw-v6o"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcy-Jt-msQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

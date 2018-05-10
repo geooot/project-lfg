@@ -30,18 +30,14 @@ class ViewController: UITableViewController {
             if user == nil{
                 self.navigationController?.popToRootViewController(animated: true)
             }
-            
-            self.loadData()
+            self.fireListener()
         }
 
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.delegate = self
         tableView.dataSource = self
     }
-
-    @IBAction func reload(_ sender: UIBarButtonItem) {
-        self.loadData()
-    }
+    
     @IBAction func signOut(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
@@ -69,6 +65,17 @@ class ViewController: UITableViewController {
         return data.count
     }
     
+    func fireListener(){
+        data = []
+        Firestore.firestore().collection("posts").addSnapshotListener { documentSnapshot, error in
+                guard documentSnapshot != nil else {
+                    print("Error fetching document: \(error!)")
+                    return
+                }
+                self.loadData()
+        }
+
+    }
     
     func loadData(){
         data = []
@@ -81,9 +88,11 @@ class ViewController: UITableViewController {
                     let item = document.data()
                     if(item.count > 0){
                         print(item)
-                        let timestamp: Timestamp = document.get("dateCreated") as! Timestamp
-                        let date = timestamp.dateValue()
-                        self.data.append(CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: date, description: item["PostDesc"] as! String, firebaseId: document.documentID, game: item["GameName"] as! String, platform: item["Platform"] as! String))
+                        if let timestamp: Timestamp = document.get("dateCreated") as? Timestamp
+                        {
+                            let date = timestamp.dateValue()
+                            self.data.append(CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: date, description: item["PostDesc"] as! String, firebaseId: document.documentID, game: item["GameName"] as! String, platform: item["Platform"] as! String))
+                        }
                     }else{
                         print("No entries got!")
                     }
@@ -92,11 +101,6 @@ class ViewController: UITableViewController {
             }
         }
     }
-    
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
-
     
 }
 

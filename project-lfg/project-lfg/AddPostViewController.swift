@@ -36,29 +36,15 @@ class AddViewController: FormViewController {
     
     var uid: String = ""
     
-    
-    
     var displayName: String = ""
-    
-    
     
     var email: String = ""
     
-    
-    
     var PlayerWant: Int = 0
-    
-    
-    
-    
     
     override func viewDidLoad() {
         
-        
-        
         super.viewDidLoad()
-        
-        
         
         Auth.auth().addStateDidChangeListener { (auth, user) in
             
@@ -429,6 +415,8 @@ class AddViewController: FormViewController {
                     "GameName" : GameName,
                     
                     "GameRank" : GameRank,
+                    
+                    "GameTime" : GameTime,
                     
                     "PostDesc" : PostDesc,
                     
