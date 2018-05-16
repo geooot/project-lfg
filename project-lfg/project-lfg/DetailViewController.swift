@@ -9,6 +9,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var platformText: UILabel!
     
     @IBOutlet weak var gameRankText: UILabel!
+    @IBOutlet weak var joinedPlayersStack: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
         Desc.text? = "\(data!.description)"
@@ -17,6 +18,32 @@ class DetailViewController: UIViewController {
         platformLine.backgroundColor = platformColors[data!.platform]!
         platformText.text? = "Platform: \(data!.platform)"
         gameRankText.text? = data!.gameRank
+    }
+    
+    @IBAction func joiningGroup(_ sender: UIButton) {
+        showJoinDialog()
+    }
+    
+    func addPersonToGroup(named name: String){
+
+    }
+    
+    func showJoinDialog() {
+        let alertController = UIAlertController(title: "Before you join...", message: "Enter your \(data!.game) username", preferredStyle: .alert)
+        
+        let confirmAction = UIAlertAction(title: "Join Group", style: .default) { (_) in
+            let displayName = alertController.textFields?[0].text
+            
+            print(displayName ?? "Nothing")
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Enter game username"
+        }
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
