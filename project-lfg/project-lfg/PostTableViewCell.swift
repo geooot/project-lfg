@@ -17,6 +17,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var containerView: UIView!
     var borderColor: UIColor!
     
+    @IBOutlet weak var gameImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,7 +29,6 @@ class PostTableViewCell: UITableViewCell {
         containerView.layer.shadowOpacity = 0.14
         containerView.layer.shadowRadius = 14
         containerView.layer.masksToBounds = true
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

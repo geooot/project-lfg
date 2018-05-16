@@ -34,9 +34,18 @@
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vg0-vX-Y87">
                                                             <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HUF-7F-h9f">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                                </imageView>
+                                                            </subviews>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="HUF-7F-h9f" secondAttribute="trailing" id="8nL-ld-UAr"/>
+                                                                <constraint firstAttribute="bottom" secondItem="HUF-7F-h9f" secondAttribute="bottom" id="Jh2-02-wb4"/>
+                                                                <constraint firstItem="HUF-7F-h9f" firstAttribute="top" secondItem="vg0-vX-Y87" secondAttribute="top" id="X9F-Tu-TEp"/>
                                                                 <constraint firstAttribute="width" constant="72" id="Xco-e1-lz8"/>
+                                                                <constraint firstItem="HUF-7F-h9f" firstAttribute="leading" secondItem="vg0-vX-Y87" secondAttribute="leading" id="d0m-iJ-92f"/>
                                                                 <constraint firstAttribute="height" constant="72" id="j2D-8u-vsk"/>
                                                             </constraints>
                                                         </view>
@@ -92,6 +101,7 @@
                                     <outlet property="containerView" destination="bWD-ps-wuH" id="q4m-Fd-JOT"/>
                                     <outlet property="datePosted" destination="4pW-RY-zVJ" id="vUr-PG-lJ1"/>
                                     <outlet property="filledInSpots" destination="FPH-mb-YBw" id="eOD-my-KvR"/>
+                                    <outlet property="gameImageView" destination="HUF-7F-h9f" id="5m6-EQ-csK"/>
                                     <outlet property="myCellLabel" destination="9rb-YE-hQq" id="hPO-b7-uQO"/>
                                     <outlet property="viewContainingImage" destination="vg0-vX-Y87" id="ooI-aE-Gq0"/>
                                 </connections>

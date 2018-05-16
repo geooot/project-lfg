@@ -61,6 +61,7 @@ class ViewController: UITableViewController {
         cell.datePosted.text = self.data[indexPath.row].datePosted.description
         cell.containerView.layer.borderColor = platformColors[self.data[indexPath.row].platform]?.cgColor
         cell.selectionStyle = .none
+        cell.gameImageView.image = gameImage[self.data[indexPath.row].game]
         return cell
     }
     

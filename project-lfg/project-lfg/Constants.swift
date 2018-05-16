@@ -14,3 +14,9 @@ var platformColors = [
     "Playstation 4": UIColor(red: 0, green: 0.25, blue: 0.6, alpha: 1),
     "PC": UIColor(red: 0.24, green: 0.24, blue: 0.24, alpha: 1)
 ]
+
+var gameImage = [
+    "Rainbow Six Siege": #imageLiteral(resourceName: "R6Siege"),
+    "League of Legends": #imageLiteral(resourceName: "League"),
+    "Overwatch": #imageLiteral(resourceName: "Overwatch")
+]
