@@ -12,13 +12,14 @@ import Firebase
 struct CellData {
     let username: String
     let numOfPlayers: Int
-    let spotsTaken: Int
+    var spotsTaken: Int
     let datePosted: Date
     let description: String
     let firebaseId: String
     let game: String
     let gameRank: String
     let platform: String
+    var peopleJoined: [String]
 }
 
 class ViewController: UITableViewController {
@@ -95,7 +96,12 @@ class ViewController: UITableViewController {
                         if let timestamp: Timestamp = document.get("dateCreated") as? Timestamp
                         {
                             let date = timestamp.dateValue()
-                            self.data.append(CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: date, description: item["PostDesc"] as! String, firebaseId: document.documentID, game: item["GameName"] as! String, gameRank: item["GameRank"] as! String, platform: item["Platform"] as! String))
+                            var tmp = CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: date, description: item["PostDesc"] as! String, firebaseId: document.documentID, game: item["GameName"] as! String, gameRank: item["GameRank"] as! String, platform: item["Platform"] as! String, peopleJoined: [])
+                            if let joined = item["peopleJoined"] as? [String]{
+                                tmp.peopleJoined = joined
+                                tmp.spotsTaken = joined.endIndex
+                            }
+                            self.data.append(tmp)
                         }
                     }else{
                         print("No entries got!")

@@ -242,9 +242,12 @@
                                                     <action selector="joiningGroup:" destination="lUD-ej-GiJ" eventType="touchUpInside" id="anu-8R-YlN"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0of-hy-hpX">
-                                                <rect key="frame" x="16" y="311" width="343" height="25"/>
-                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBs-CM-gfo">
+                                                <rect key="frame" x="16" y="311" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -254,10 +257,9 @@
                                             <constraint firstItem="1zr-2K-bHm" firstAttribute="top" secondItem="ECS-pb-C4X" secondAttribute="top" constant="32" id="DNR-Dr-fcY"/>
                                             <constraint firstAttribute="trailing" secondItem="YVu-RP-rH3" secondAttribute="trailing" constant="16" id="DgO-IY-Uz2"/>
                                             <constraint firstItem="p4V-Or-7uA" firstAttribute="top" secondItem="3ka-8a-fA3" secondAttribute="bottom" constant="23.5" id="Du3-dO-hH2"/>
-                                            <constraint firstItem="0of-hy-hpX" firstAttribute="top" secondItem="ZSm-pO-haC" secondAttribute="bottom" constant="8" id="Jt6-ss-MNP"/>
+                                            <constraint firstItem="pBs-CM-gfo" firstAttribute="top" secondItem="ZSm-pO-haC" secondAttribute="bottom" constant="8" id="G6b-CG-74f"/>
                                             <constraint firstItem="YVu-RP-rH3" firstAttribute="leading" secondItem="ECS-pb-C4X" secondAttribute="leading" constant="16" id="MaM-HY-9L0"/>
                                             <constraint firstAttribute="trailing" secondItem="0Nv-yE-W4W" secondAttribute="trailing" constant="-2" id="Nbj-HP-SHG"/>
-                                            <constraint firstAttribute="trailing" secondItem="0of-hy-hpX" secondAttribute="trailing" constant="16" id="Neo-AN-ADt"/>
                                             <constraint firstItem="FRs-NA-iMN" firstAttribute="leading" secondItem="ECS-pb-C4X" secondAttribute="leading" constant="16" id="PB8-xC-Kkb"/>
                                             <constraint firstItem="FRs-NA-iMN" firstAttribute="top" secondItem="0Nv-yE-W4W" secondAttribute="bottom" constant="17.5" id="PpT-my-IpY"/>
                                             <constraint firstAttribute="trailing" secondItem="1zr-2K-bHm" secondAttribute="trailing" constant="16" id="Q9W-GU-273"/>
@@ -266,9 +268,9 @@
                                             <constraint firstAttribute="trailing" secondItem="xXw-WV-5fN" secondAttribute="trailing" constant="16" id="Zg3-A1-WNQ"/>
                                             <constraint firstAttribute="height" constant="1000" id="bOf-3e-aGY"/>
                                             <constraint firstAttribute="trailing" secondItem="ZSm-pO-haC" secondAttribute="trailing" constant="16" id="d9O-VL-L7H"/>
+                                            <constraint firstItem="pBs-CM-gfo" firstAttribute="leading" secondItem="ECS-pb-C4X" secondAttribute="leading" constant="16" id="gpM-Up-lXJ"/>
                                             <constraint firstItem="ZSm-pO-haC" firstAttribute="leading" secondItem="ECS-pb-C4X" secondAttribute="leading" constant="16" id="ppo-uk-mRN"/>
                                             <constraint firstItem="0Nv-yE-W4W" firstAttribute="bottom" secondItem="1zr-2K-bHm" secondAttribute="bottom" constant="16" id="qVk-Em-12g"/>
-                                            <constraint firstItem="0of-hy-hpX" firstAttribute="leading" secondItem="ECS-pb-C4X" secondAttribute="leading" constant="16" id="t7m-Yj-hRx"/>
                                             <constraint firstItem="ZSm-pO-haC" firstAttribute="top" secondItem="p4V-Or-7uA" secondAttribute="bottom" constant="8" id="w6E-Ts-bnz"/>
                                             <constraint firstItem="p4V-Or-7uA" firstAttribute="leading" secondItem="ECS-pb-C4X" secondAttribute="leading" constant="16" id="wWo-e0-0Ku"/>
                                         </constraints>
@@ -294,7 +296,7 @@
                     <connections>
                         <outlet property="Desc" destination="x34-0L-w4w" id="rSo-sf-XXE"/>
                         <outlet property="gameRankText" destination="bvp-HJ-kxa" id="73L-Lb-QmU"/>
-                        <outlet property="joinedPlayersStack" destination="0of-hy-hpX" id="7ms-ha-FXJ"/>
+                        <outlet property="joinedLabel" destination="pBs-CM-gfo" id="jjC-rc-Fpq"/>
                         <outlet property="platformLine" destination="0Nv-yE-W4W" id="giy-nC-vq3"/>
                         <outlet property="platformText" destination="mm2-zq-VJC" id="pTK-Sj-eTM"/>
                         <outlet property="spotsFilled" destination="BXK-sX-d4I" id="Ils-53-yyr"/>
@@ -466,7 +468,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aeM-dc-dEj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="2Au-gn-IRF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6H2-uL-7aL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6H2-uL-7aL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -485,7 +487,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GeW-Yf-csy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Add Post" id="M4q-ff-A0E"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uFQ-8l-Vjp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uFQ-8l-Vjp">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
