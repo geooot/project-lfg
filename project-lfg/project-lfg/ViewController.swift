@@ -12,8 +12,8 @@ import Firebase
 struct CellData {
     let username: String
     let numOfPlayers: Int
-    var spotsTaken: Int
-    let datePosted: Date
+    let spotsTaken: Int
+    let datePosted: Int
     let description: String
     let firebaseId: String
     let game: String
@@ -41,6 +41,8 @@ class ViewController: UITableViewController {
         tableView.dataSource = self
     }
     
+    
+    
     @IBAction func signOut(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
@@ -59,10 +61,11 @@ class ViewController: UITableViewController {
         let cell: PostTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "postCell") as! PostTableViewCell
         cell.myCellLabel.text = "\(self.data[indexPath.row].username) wants \(self.data[indexPath.row].numOfPlayers) players"
         cell.filledInSpots.text = "\(self.data[indexPath.row].spotsTaken)/\(self.data[indexPath.row].numOfPlayers) Spots Taken"
-        cell.datePosted.text = self.data[indexPath.row].datePosted.description
+        cell.datePosted.text = "\((self.data[indexPath.row].datePosted as AnyObject).description!) hrs ago"
         cell.containerView.layer.borderColor = platformColors[self.data[indexPath.row].platform]?.cgColor
         cell.selectionStyle = .none
         cell.gameImageView.image = gameImage[self.data[indexPath.row].game]
+        
         return cell
     }
     
@@ -81,7 +84,6 @@ class ViewController: UITableViewController {
         }
 
     }
-    
     func loadData(){
         data = []
         Firestore.firestore().collection("posts").getDocuments() { (querySnapshot, err) in
@@ -96,7 +98,10 @@ class ViewController: UITableViewController {
                         if let timestamp: Timestamp = document.get("dateCreated") as? Timestamp
                         {
                             let date = timestamp.dateValue()
-                            var tmp = CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: date, description: item["PostDesc"] as! String, firebaseId: document.documentID, game: item["GameName"] as! String, gameRank: item["GameRank"] as! String, platform: item["Platform"] as! String, peopleJoined: [])
+                            let timeNow: Date = Date()
+                            let postedSeconds = timeNow.timeIntervalSince(date)
+                            let postedHours = Int(postedSeconds/3600)
+                            var tmp = CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: postedHours, description: item["PostDesc"] as! String, firebaseId: document.documentID, game: item["GameName"] as! String, gameRank: item["GameRank"] as! String, platform: item["Platform"] as! String, peopleJoined: [])
                             if let joined = item["peopleJoined"] as? [String]{
                                 tmp.peopleJoined = joined
                                 tmp.spotsTaken = joined.endIndex
@@ -107,6 +112,7 @@ class ViewController: UITableViewController {
                         print("No entries got!")
                     }
                 }
+                self.data.sort(by:  {$0.datePosted < $1.datePosted})
                 self.tableView.reloadData()
             }
         }

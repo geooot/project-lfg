@@ -103,8 +103,8 @@ class AddViewController: FormViewController {
                 want.tag = "PlayerWant"
                 want.title = "Players Wanted"
                 want.selectorTitle = "Pick Player Count"
-                want.options = ["1", "2", "3", "4", "5"]
-                want.value = "1"
+                want.options = ["0", "1", "2", "3", "4", "5"]
+                want.value = "0"
                 }.onChange{ want in
                     self.PlayerWant = Int(want.value!)!
                     print(self.PlayerWant)
