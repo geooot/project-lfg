@@ -457,7 +457,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="uot-Lc-GEp"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user" id="uot-Lc-GEp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fes-8I-V4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -467,7 +467,7 @@
         <scene sceneID="qEt-Od-wng">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aeM-dc-dEj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="2Au-gn-IRF"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="2Au-gn-IRF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6H2-uL-7aL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -486,7 +486,7 @@
         <scene sceneID="h8Y-GI-Le9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GeW-Yf-csy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Add Post" id="M4q-ff-A0E"/>
+                    <tabBarItem key="tabBarItem" title="Add Post" image="plus-circle" id="M4q-ff-A0E"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uFQ-8l-Vjp">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -502,6 +502,11 @@
             <point key="canvasLocation" x="980" y="800.14992503748135"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="18" height="18"/>
+        <image name="plus-circle" width="18" height="18"/>
+        <image name="user" width="18" height="18"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wDD-H0-nsy"/>
     </inferredMetricsTieBreakers>

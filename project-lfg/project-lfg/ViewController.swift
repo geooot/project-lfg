@@ -12,7 +12,7 @@ import Firebase
 struct CellData {
     let username: String
     let numOfPlayers: Int
-    let spotsTaken: Int
+    var spotsTaken: Int
     let datePosted: Int
     let description: String
     let firebaseId: String
