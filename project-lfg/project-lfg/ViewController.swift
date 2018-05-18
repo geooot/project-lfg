@@ -13,7 +13,7 @@ struct CellData {
     let username: String
     let numOfPlayers: Int
     let spotsTaken: Int
-    let datePosted: Any
+    let datePosted: Int
     let description: String
     let firebaseId: String
     let game: String
@@ -60,10 +60,11 @@ class ViewController: UITableViewController {
         let cell: PostTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "postCell") as! PostTableViewCell
         cell.myCellLabel.text = "\(self.data[indexPath.row].username) wants \(self.data[indexPath.row].numOfPlayers) players"
         cell.filledInSpots.text = "\(self.data[indexPath.row].spotsTaken)/\(self.data[indexPath.row].numOfPlayers) Spots Taken"
-        cell.datePosted.text = (self.data[indexPath.row].datePosted as AnyObject).description
+        cell.datePosted.text = "\((self.data[indexPath.row].datePosted as AnyObject).description!) hrs ago"
         cell.containerView.layer.borderColor = platformColors[self.data[indexPath.row].platform]?.cgColor
         cell.selectionStyle = .none
         cell.gameImageView.image = gameImage[self.data[indexPath.row].game]
+        
         return cell
     }
     
@@ -97,14 +98,16 @@ class ViewController: UITableViewController {
                         {
                             let date = timestamp.dateValue()
                             let timeNow: Date = Date()
-                            let this = timeNow.timeIntervalSince(date)
-                            print("!!!!!!!!!!!!!\(this)!!!!!!!!!!!!")
-                            self.data.append(CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: this, description: item["PostDesc"] as! String, firebaseId: document.documentID, game: item["GameName"] as! String, gameRank: item["GameRank"] as! String, platform: item["Platform"] as! String))
+                            let postedSeconds = timeNow.timeIntervalSince(date)
+                            let postedHours = Int(postedSeconds/3600)
+                            
+                            self.data.append(CellData(username: item["displayName"] as! String, numOfPlayers: item["PlayerWant"] as! Int, spotsTaken: 0, datePosted: postedHours, description: item["PostDesc"] as! String, firebaseId: document.documentID, game: item["GameName"] as! String, gameRank: item["GameRank"] as! String, platform: item["Platform"] as! String))
                         }
                     }else{
                         print("No entries got!")
                     }
                 }
+                self.data.sort(by:  {$0.datePosted < $1.datePosted})
                 self.tableView.reloadData()
             }
         }
