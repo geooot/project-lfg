@@ -9,6 +9,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var platformLine: UIView!
     @IBOutlet weak var platformText: UILabel!
     
+    @IBOutlet weak var joinBtn: UIButton!
     @IBOutlet weak var gameRankText: UILabel!
     @IBOutlet weak var joinedLabel: UILabel!
     override func viewDidLoad() {
@@ -45,8 +46,9 @@ class DetailViewController: UIViewController {
     
     func addPersonToGroup(named name: String){
         if var data = data {
-            data.peopleJoined.append(name)
-            Firestore.firestore().collection("posts").document(data.firebaseId).updateData(["peopleJoined": data.peopleJoined])
+            let userID = Auth.auth().currentUser!.uid
+            data.peopleJoined.append(name+"_!_"+userID)
+        Firestore.firestore().collection("posts").document(data.firebaseId).updateData(["peopleJoined": data.peopleJoined])
         }
     }
     
@@ -57,7 +59,8 @@ class DetailViewController: UIViewController {
         }
         var people = ""
         for person in data.peopleJoined{
-            people += "\(person)\n"
+            let tmp = person.components(separatedBy: "_!_")
+            people += "\(tmp[0])\n"
         }
         joinedLabel.text = people
         spotsFilled.text? = "\(data.spotsTaken)/\(data.numOfPlayers) Spots Taken"
