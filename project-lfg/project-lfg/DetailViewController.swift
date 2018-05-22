@@ -33,6 +33,13 @@ class DetailViewController: UIViewController {
                     self.data?.peopleJoined = joined
                     self.data?.spotsTaken = joined.endIndex
                     print("NEW PEOPLE JOINED", joined)
+                    
+                    
+                    if(self.alreadyJoined()){
+                        self.joinBtn.setTitle("Leave Group", for: .normal)
+                    }else{
+                        self.joinBtn.setTitle("Join Group", for: .normal)
+                    }
                 }
 
                 self.refreshJoinedLabels()
@@ -41,7 +48,18 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func joiningGroup(_ sender: UIButton) {
-        showJoinDialog()
+ 
+        if(alreadyJoined()){
+            guard var data = data else {
+                print("Error refreshJoinedLables")
+                return
+            }
+            data.peopleJoined.remove(at: getIndexOfAlreadyJoinedPlayer())
+            Firestore.firestore().collection("posts").document(data.firebaseId).updateData(["peopleJoined": data.peopleJoined])
+        }else{
+           showJoinDialog()
+        }
+        
     }
     
     func addPersonToGroup(named name: String){
@@ -65,6 +83,35 @@ class DetailViewController: UIViewController {
         joinedLabel.text = people
         spotsFilled.text? = "\(data.spotsTaken)/\(data.numOfPlayers) Spots Taken"
     }
+    
+    func alreadyJoined() -> Bool{
+        guard let joined = self.data?.peopleJoined else {
+            return false
+        }
+        let userID = Auth.auth().currentUser!.uid
+        
+        for item in joined{
+            if item.contains(userID) {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func getIndexOfAlreadyJoinedPlayer() -> Int {
+        guard let joined = self.data?.peopleJoined else {
+            return -1
+        }
+        let userID = Auth.auth().currentUser!.uid
+        
+        for (index, item) in joined.enumerated(){
+            if item.contains(userID) {
+                return index
+            }
+        }
+        return -1
+    }
+    
     
     func showJoinDialog() {
         let alertController = UIAlertController(title: "Before you join...", message: "Enter your \(data!.game) username", preferredStyle: .alert)

@@ -10,6 +10,7 @@
 		2581BFA53ABEDA2FD9CE2285 /* Pods_project_lfg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375A8F7B1D6377CFFBAAF4A9 /* Pods_project_lfg.framework */; };
 		D62E89A720A224BA00516A34 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E89A620A224BA00516A34 /* DetailViewController.swift */; };
 		D62E89A920A2297800516A34 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E89A820A2297800516A34 /* Constants.swift */; };
+		D65F166820B4997E00269369 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65F166720B4997E00269369 /* ProfileViewController.swift */; };
 		D694AB8F20813117002044D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694AB8E20813117002044D4 /* AppDelegate.swift */; };
 		D694AB9120813117002044D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694AB9020813117002044D4 /* ViewController.swift */; };
 		D694AB9420813117002044D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D694AB9220813117002044D4 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		5A72B283A81675F67C996577 /* Pods-project-lfg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-lfg.release.xcconfig"; path = "Pods/Target Support Files/Pods-project-lfg/Pods-project-lfg.release.xcconfig"; sourceTree = "<group>"; };
 		D62E89A620A224BA00516A34 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D62E89A820A2297800516A34 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D65F166720B4997E00269369 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D694AB8B20813117002044D4 /* project-lfg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-lfg.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D694AB8E20813117002044D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D694AB9020813117002044D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				D6F21211208FBB6C003F8A56 /* PostTableViewCell.swift */,
 				D62E89A620A224BA00516A34 /* DetailViewController.swift */,
 				D62E89A820A2297800516A34 /* Constants.swift */,
+				D65F166720B4997E00269369 /* ProfileViewController.swift */,
 			);
 			path = "project-lfg";
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				D6CD3C422089199800D3CFD7 /* LoadingViewController.swift in Sources */,
 				D6B63F7F209CE2880014E3BC /* AddPostViewController.swift in Sources */,
 				D6F21212208FBB6C003F8A56 /* PostTableViewCell.swift in Sources */,
+				D65F166820B4997E00269369 /* ProfileViewController.swift in Sources */,
 				D62E89A720A224BA00516A34 /* DetailViewController.swift in Sources */,
 				D62E89A920A2297800516A34 /* Constants.swift in Sources */,
 			);
