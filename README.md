@@ -1,5 +1,7 @@
 # project-lfg
+[[Source]](https://github.com/geooot/project-lfg)  [[Website]](https://geooot.com/project-lfg)
 <p align="center"><img src="lfg.png" width="400"/></p>
+
 This was a school project in which we created an original app of our own idea in what is essentially 23 hours of work (spread out across like 4 weeks).
 
 Our idea was to create an app that made finding people to play games with easier. While there are many ways to find people to play with, most people put their faith into the game’s own matchmaking system to find games, but the goal of our app is to aid in the process of creating groups, and not having to join random players.
@@ -22,7 +24,7 @@ Were we successfull? Not really...
 - Eureka (albeit a beta version since we were stuck on xcode 8)
 
 ## Trying it out
-There is pretty much a 0% chance this will work when you try it (it sure doesn't work on xcode 9). If you have xcode 8, maybe you will have some luck (if i decide to keep the firebase project still up). But don't bet on this working. However, You can see a small video demonstration here if you want: http://geooot.com/project-lfg/lfg.mp4
+There is pretty much a 0% chance this will work when you try it (it sure doesn't work on xcode 9). If you have xcode 8, maybe you will have some luck (if i decide to keep the firebase project still up). But don't bet on this working. However, You can see a small video demonstration [here if you want](https://geooot.com/project-lfg/lfg.mp4).
 
 ## Devs
 - George Thayamkery
